@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block title %}{{ disease.display_name(sf_lang) }} - Sunflower Diagnosis{% endblock %}
+
+{% block content %}
+{% macro bullet_list(text) %}
+  {% set normalized = (text or "") | replace("<br />", "\n") | replace("<br/>", "\n") | replace("<br>", "\n") %}
+  {% set lines = normalized.splitlines() %}
+  <ul class="sf-bullets">
+    {% for line in lines %}
+      {% set cleaned = line | replace("•", "") | replace("*", "") | trim %}
+      {% if cleaned.startswith("- ") %}
+        {% set cleaned = cleaned[2:] | trim %}
+      {% endif %}
+      {% if cleaned %}
+        <li>{{ cleaned }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+<a href="{{ url_for('main.disease_library') }}" class="btn btn-outline-dark sf-btn mb-3">← Back to library</a>
+{% if diagnosis %}
+<div class="card border-0 shadow-sm mb-3">
+  <div class="card-body">
+    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2">
+      <div>
+        <div class="fw-bold">Symptom Checker Result</div>
+        <div class="text-muted small">
+          Based on the symptoms you selected, the system suggests <b>{{ disease.display_name(sf_lang) }}</b>.
+        </div>
+      </div>
+      <span class="badge text-bg-dark">{{ diagnosis.best.percent }}% match</span>
+    </div>
+
+    {% if diagnosis.selected_labels %}
+      <div class="small fw-semibold mt-3 mb-1">Symptoms you selected</div>
+      <ul class="small mb-0">
+        {% for label in diagnosis.selected_labels %}
+          <li>{{ label }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if diagnosis.best.matched %}
+      <div class="small fw-semibold mt-3 mb-1">Why this disease?</div>
+      <ul class="small mb-0">
+        {% for label, w in diagnosis.best.matched %}
+          <li>{{ label }} <span class="text-muted">(weight {{ "%.2f"|format(w) }})</span></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if diagnosis.others %}
+      <div class="small fw-semibold mt-3 mb-1">Other possible matches</div>
+      <ul class="small mb-0">
+        {% for r in diagnosis.others %}
+          <li>
+            <a href="{{ url_for('main.disease_detail', slug=r.disease_key) }}">{{ r.disease_name }}</a>
+            <span class="text-muted">({{ r.percent }}%)</span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <div class="mt-3">
+      <a class="btn btn-sm btn-outline-dark" href="{{ url_for('main.diagnose_page') }}">Run symptom checker again</a>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<div class="row g-4 align-items-start">
+  <div class="col-lg-5">
+    <div class="sf-card">
+      <img class="sf-img-lg" src="{{ url_for('static', filename='images/' + (disease.image_filename or 'placeholder.png')) }}" alt="{{ disease.display_name(sf_lang) }}">
+      <div class="p-4">
+        <div class="sf-pill mb-2"><i class="bi bi-flower1" aria-hidden="true"></i> Condition</div>
+        <h2 class="sf-title mb-1">{{ disease.display_name(sf_lang) }}</h2>
+        <p class="sf-subtitle mb-0">A practical summary to help you diagnose and respond.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-7">
+    <div class="sf-card p-4 p-lg-5">
+      <div class="d-grid gap-3">
+        <div class="sf-section">
+          <div class="sf-kv">
+            <div class="sf-icon"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i></div>
+            <div>
+              <div class="sf-section-title">Symptoms</div>
+              <div class="text-muted">{{ bullet_list(disease.display_symptoms(sf_lang)) }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sf-section">
+          <div class="sf-kv">
+            <div class="sf-icon"><i class="bi bi-bug" aria-hidden="true"></i></div>
+            <div>
+              <div class="sf-section-title">Cause</div>
+              <div class="text-muted">{{ bullet_list(disease.display_cause(sf_lang)) }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sf-section">
+          <div class="sf-kv">
+            <div class="sf-icon"><i class="bi bi-capsule" aria-hidden="true"></i></div>
+            <div>
+              <div class="sf-section-title">Treatment</div>
+              <div class="text-muted">{{ bullet_list(disease.display_treatment(sf_lang)) }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sf-section">
+          <div class="sf-kv">
+            <div class="sf-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+            <div>
+              <div class="sf-section-title">Prevention</div>
+              <div class="text-muted">{{ bullet_list(disease.display_prevention(sf_lang)) }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 pt-2">
+          <a class="btn btn-dark sf-btn" href="{{ url_for('main.disease_library') }}">Explore other diseases</a>
+          <a class="btn btn-outline-dark sf-btn" href="#" onclick="window.print(); return false;">Print report</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% block title %}New Disease • Expert Sunflower{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+  <div>
+    <h1 class="h3 mb-1">Add disease report</h1>
+    <div class="text-muted">Create a new sunflower disease report. Symptoms entered here are saved to the report and symptom checklist automatically.</div>
+  </div>
+  <a class="btn btn-outline-dark" href="{{ url_for('doctor.diseases') }}">Back</a>
+</div>
+
+<div class="card sf-card p-3 p-lg-4 rounded-4">
+  <form method="post" enctype="multipart/form-data" data-symptoms-builder data-bilingual-form data-default-lang="en">
+    {{ form.hidden_tag() }}
+
+    <div class="row g-3">
+      <div class="col-12 col-lg-6">
+        <label class="form-label">{{ form.image.label.text }}</label>
+        {{ form.image(class="form-control") }}
+        <div class="small text-muted mt-1">Optional. If empty, placeholder image is used.</div>
+      </div>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3 mb-2">
+      <div class="small text-muted">Input language</div>
+      <div class="btn-group" role="group" aria-label="Input language">
+        <button type="button" class="btn btn-sm btn-outline-dark" data-lang-switch="en">English</button>
+        <button type="button" class="btn btn-sm btn-outline-dark" data-lang-switch="km">Khmer</button>
+      </div>
+    </div>
+
+    <div data-lang-panel="en">
+      <div class="row g-3">
+        <div class="col-12">
+          <label class="form-label">{{ form.name_en.label.text }}</label>
+          {{ form.name_en(class="form-control") }}
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.symptoms_en.label.text }}</label>
+          {{ form.symptoms_en(class="form-control bg-light", rows="3", readonly=true) }}
+          <div class="row g-2 mt-1" data-symptom-builder data-symptom-target="symptoms_en">
+            <div class="col-md-7">
+              <input
+                type="text"
+                class="form-control"
+                autocomplete="off"
+                placeholder="Symptom label"
+                data-symptom-builder-input
+              />
+            </div>
+            <div class="col-md-3">
+              <select class="form-select" data-symptom-builder-category>
+                <option value="Leaf">Leaf</option>
+                <option value="Leaf / Head">Leaf / Head</option>
+                <option value="Whole plant">Whole plant</option>
+                <option value="Stem">Stem</option>
+                <option value="Head">Head</option>
+                <option value="Root">Root</option>
+                <option value="Seed / Seedling">Seed / Seedling</option>
+                <option value="Environment">Environment</option>
+              </select>
+            </div>
+            <div class="col-md-2 d-grid">
+              <button type="button" class="btn btn-outline-dark" data-symptom-builder-add>Add symptom</button>
+            </div>
+            <div class="col-12 small text-muted">Add as <b>Type: Symptom label</b> (for example: <i>Leaf: Yellow spots</i>).</div>
+          </div>
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.cause_en.label.text }}</label>
+          {{ form.cause_en(class="form-control", rows="3", data_bullet_textarea="true") }}
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.treatment_en.label.text }}</label>
+          {{ form.treatment_en(class="form-control", rows="3", data_bullet_textarea="true") }}
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.prevention_en.label.text }}</label>
+          {{ form.prevention_en(class="form-control", rows="3", data_bullet_textarea="true") }}
+        </div>
+      </div>
+    </div>
+
+    <div data-lang-panel="km" class="d-none">
+      <div class="row g-3">
+        <div class="col-12">
+          <label class="form-label">{{ form.name_km.label.text }}</label>
+          {{ form.name_km(class="form-control") }}
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.symptoms_km.label.text }}</label>
+          {{ form.symptoms_km(class="form-control bg-light", rows="3", readonly=true) }}
+          <div class="row g-2 mt-1" data-symptom-builder data-symptom-target="symptoms_km">
+            <div class="col-md-7">
+              <input
+                type="text"
+                class="form-control"
+                autocomplete="off"
+                placeholder="ឈ្មោះរោគសញ្ញា"
+                data-symptom-builder-input
+              />
+            </div>
+            <div class="col-md-3">
+              <select class="form-select" data-symptom-builder-category>
+                <option value="ស្លឹក">ស្លឹក</option>
+                <option value="ស្លឹក / ក្បាលផ្កា">ស្លឹក / ក្បាលផ្កា</option>
+                <option value="រុក្ខជាតិទាំងមូល">រុក្ខជាតិទាំងមូល</option>
+                <option value="ដើម">ដើម</option>
+                <option value="ក្បាលផ្កា">ក្បាលផ្កា</option>
+                <option value="ឫស">ឫស</option>
+                <option value="គ្រាប់ / កូនដំណាំ">គ្រាប់ / កូនដំណាំ</option>
+                <option value="បរិស្ថាន">បរិស្ថាន</option>
+              </select>
+            </div>
+            <div class="col-md-2 d-grid">
+              <button type="button" class="btn btn-outline-dark" data-symptom-builder-add>Add symptom</button>
+            </div>
+            <div class="col-12 small text-muted">Add as <b>ប្រភេទ: រោគសញ្ញា</b> (ឧទាហរណ៍: <i>ស្លឹក: ចំណុចពណ៌លឿង</i>).</div>
+          </div>
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.cause_km.label.text }}</label>
+          {{ form.cause_km(class="form-control", rows="3", data_bullet_textarea="true") }}
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.treatment_km.label.text }}</label>
+          {{ form.treatment_km(class="form-control", rows="3", data_bullet_textarea="true") }}
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.prevention_km.label.text }}</label>
+          {{ form.prevention_km(class="form-control", rows="3", data_bullet_textarea="true") }}
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-3 mt-1">
+      <div class="col-12 d-flex gap-2">
+        {{ form.submit(class="btn btn-dark") }}
+        <a class="btn btn-outline-secondary" href="{{ url_for('doctor.diseases') }}">Cancel</a>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

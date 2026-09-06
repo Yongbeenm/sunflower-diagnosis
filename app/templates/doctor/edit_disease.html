@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% block title %}Edit {{ disease.name }} • Expert Sunflower{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+  <div>
+    <h1 class="h3 mb-1">Edit disease</h1>
+    <div class="text-muted">{{ disease.name }} ({{ disease.slug }})</div>
+  </div>
+  <a class="btn btn-outline-dark" href="{{ url_for('doctor.diseases') }}">Back</a>
+</div>
+
+<div class="card sf-card p-3 p-lg-4 rounded-4">
+  <form method="post" enctype="multipart/form-data" data-bilingual-form data-default-lang="en">
+    {{ form.hidden_tag() }}
+
+    <div class="row g-3">
+      <div class="col-12 col-lg-6">
+        <label class="form-label">{{ form.image.label.text }}</label>
+        {{ form.image(class="form-control") }}
+        <div class="small text-muted mt-1">Current: {{ disease.image_filename or "None" }}</div>
+      </div>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3 mb-2">
+      <div class="small text-muted">Input language</div>
+      <div class="btn-group" role="group" aria-label="Input language">
+        <button type="button" class="btn btn-sm btn-outline-dark" data-lang-switch="en">English</button>
+        <button type="button" class="btn btn-sm btn-outline-dark" data-lang-switch="km">Khmer</button>
+      </div>
+    </div>
+
+    <div data-lang-panel="en">
+      <div class="row g-3">
+        <div class="col-12">
+          <label class="form-label">{{ form.name_en.label.text }}</label>
+          {{ form.name_en(class="form-control") }}
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.cause_en.label.text }}</label>
+          {{ form.cause_en(class="form-control", rows="3", data_bullet_textarea="true") }}
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.treatment_en.label.text }}</label>
+          {{ form.treatment_en(class="form-control", rows="3", data_bullet_textarea="true") }}
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.prevention_en.label.text }}</label>
+          {{ form.prevention_en(class="form-control", rows="3", data_bullet_textarea="true") }}
+        </div>
+      </div>
+    </div>
+
+    <div data-lang-panel="km" class="d-none">
+      <div class="row g-3">
+        <div class="col-12">
+          <label class="form-label">{{ form.name_km.label.text }}</label>
+          {{ form.name_km(class="form-control") }}
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.cause_km.label.text }}</label>
+          {{ form.cause_km(class="form-control", rows="3", data_bullet_textarea="true") }}
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.treatment_km.label.text }}</label>
+          {{ form.treatment_km(class="form-control", rows="3", data_bullet_textarea="true") }}
+        </div>
+        <div class="col-12">
+          <label class="form-label">{{ form.prevention_km.label.text }}</label>
+          {{ form.prevention_km(class="form-control", rows="3", data_bullet_textarea="true") }}
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-3 mt-1">
+      <div class="col-12">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <div>
+            <div class="form-label mb-0">Symptoms</div>
+            <div class="small text-muted">Use checklist actions here instead of typing raw symptom text.</div>
+          </div>
+          <div class="d-flex gap-2 flex-wrap">
+            <span class="badge text-bg-light border">{{ total_count }} symptom{% if total_count != 1 %}s{% endif %}</span>
+            <a class="btn btn-sm btn-dark" href="{{ url_for('doctor.new_checklist_item', disease_id=disease.id, next='disease') }}">Add symptom</a>
+          </div>
+        </div>
+
+        <div class="card border-0 bg-light mt-2">
+          <div class="card-body d-grid gap-3">
+            {% if total_count %}
+              {% for group in grouped_items %}
+                {% if group["count"] %}
+                  <section class="sf-symptom-section">
+                    <div class="sf-symptom-group-head mb-3">
+                      <div class="sf-symptom-group-title">{{ group["category"] }}</div>
+                      <div class="sf-symptom-group-count">{{ group["count"] }}</div>
+                    </div>
+                    <div class="d-grid gap-2">
+                      {% for item in group["items"] %}
+                        <div class="sf-symptom-manage-row">
+                          <div>
+                            <div class="fw-semibold">{{ item["label"] }}</div>
+                            <div class="small text-muted">{{ item.get("label_km") }}</div>
+                          </div>
+                          <div class="d-flex gap-2 flex-wrap justify-content-end">
+                            <a class="btn btn-sm btn-outline-dark" href="{{ url_for('doctor.edit_checklist_item', disease_id=disease.id, item_key=item['key'], next='disease') }}">Edit</a>
+                            <button
+                              type="submit"
+                              class="btn btn-sm btn-outline-danger"
+                              formaction="{{ url_for('doctor.delete_checklist_item', disease_id=disease.id, item_key=item['key'], next='disease') }}"
+                              formmethod="post"
+                              formnovalidate
+                              onclick="return confirm('Delete this symptom?');"
+                            >
+                              Delete
+                            </button>
+                          </div>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </section>
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              <div class="text-muted">No symptom items yet for this disease.</div>
+              <div>
+                <a class="btn btn-dark" href="{{ url_for('doctor.new_checklist_item', disease_id=disease.id, next='disease') }}">Add the first symptom</a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-3 mt-1">
+      <div class="col-12 d-flex gap-2 flex-wrap">
+        {{ form.submit(class="btn btn-dark") }}
+        <a class="btn btn-outline-secondary" href="{{ url_for('main.disease_detail', slug=disease.slug) }}">View</a>
+      </div>
+    </div>
+  </form>
+  {% if current_user.has_permission("delete_diseases") %}
+
+  <hr class="my-4"/>
+
+  <form method="post" action="{{ url_for('doctor.delete_disease', disease_id=disease.id) }}"
+        onsubmit="return confirm('Delete {{ disease.name }}? This cannot be undone.');">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    <button type="submit" class="btn btn-outline-danger">Delete disease</button>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

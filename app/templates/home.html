@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Sunflower Diagnosis{% endblock %}
+
+{% block content %}
+<div id="sf-home-react-root" class="min-h-[60vh]">
+  <div class="rounded-[28px] border border-white/60 bg-white/70 p-6 shadow-[0_24px_64px_rgba(36,56,29,0.14)] backdrop-blur dark:border-white/10 dark:bg-[#132017]/80">
+    <div class="h-10 w-40 animate-pulse rounded-full bg-[#dce9cf] dark:bg-white/10"></div>
+    <div class="mt-4 h-16 max-w-3xl animate-pulse rounded-[24px] bg-[#edf3e5] dark:bg-white/10"></div>
+    <div class="mt-4 grid gap-4 md:grid-cols-3">
+      <div class="h-36 animate-pulse rounded-[24px] bg-[#edf3e5] dark:bg-white/10"></div>
+      <div class="h-36 animate-pulse rounded-[24px] bg-[#edf3e5] dark:bg-white/10"></div>
+      <div class="h-36 animate-pulse rounded-[24px] bg-[#edf3e5] dark:bg-white/10"></div>
+    </div>
+  </div>
+</div>
+<script id="sf-home-data" type="application/json">{{ home_payload | tojson }}</script>
+{% endblock %}

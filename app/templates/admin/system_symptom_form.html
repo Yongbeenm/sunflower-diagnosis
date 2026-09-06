@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% block title %}{% if mode == "add" %}Add Symptom • Admin{% else %}Edit Symptom • Admin{% endif %}{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+  <div>
+    <h1 class="h3 mb-1">{% if mode == "add" %}Add symptom{% else %}Edit symptom{% endif %}</h1>
+    <div class="text-muted">
+      {% if mode == "add" %}
+        Create a symptom in one simple form, then optionally link it to a disease.
+      {% else %}
+        Update the symptom details and optionally assign it to a disease.
+      {% endif %}
+    </div>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <a class="btn btn-outline-dark" href="{{ url_for('admin.all_symptoms') }}">Back to all symptoms</a>
+    <a class="btn btn-outline-secondary" href="{{ url_for('admin.checklists') }}">Manage symptoms</a>
+  </div>
+</div>
+
+<div class="sf-tabs">
+  <a class="sf-tab" href="{{ url_for('admin.diseases') }}">Manage diseases</a>
+  <a class="sf-tab" href="{{ url_for('admin.checklists') }}">Manage symptoms</a>
+  <a class="sf-tab is-active" href="{{ url_for('admin.all_symptoms') }}">All symptoms</a>
+</div>
+
+<div class="card sf-card p-3 p-lg-4 rounded-4" style="max-width: 820px;">
+  {% if mode != "add" and symptom %}
+    <div class="mb-4">
+      <div class="small text-muted mb-1">Current usage</div>
+      <div class="fw-semibold">{{ symptom["label"] }}</div>
+      <div class="small text-muted mb-1">{{ symptom["label_km"] }}</div>
+      <div class="text-muted">
+        {% if symptom["disease_count"] %}
+          Used in {{ symptom["disease_count"] }} disease{{ '' if symptom["disease_count"] == 1 else 's' }}: {{ symptom["disease_names"]|join(', ') }}
+        {% else %}
+          Not assigned to any disease yet.
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  <form method="post">
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+      <label class="form-label">{{ form.label_en.label.text }}</label>
+      {{ form.label_en(class="form-control", placeholder="Enter English symptom text") }}
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">{{ form.label_km.label.text }}</label>
+      {{ form.label_km(class="form-control", placeholder="បញ្ចូលរោគសញ្ញាភាសាខ្មែរ") }}
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">{{ form.category.label.text }}</label>
+      {{ form.category(class="form-select") }}
+    </div>
+
+    <div class="mb-4">
+      {% if mode == "edit" %}
+        <label class="form-label">
+          {% if symptom and symptom["disease_count"] %}
+            Add or remove diseases
+          {% else %}
+            Assign to disease
+          {% endif %}
+        </label>
+        <div class="sf-disease-picker" data-disease-picker>
+          <div class="small text-muted" data-disease-summary>
+            {{ assignment_diseases|selectattr('selected')|list|length }} disease selected
+          </div>
+          <div class="sf-disease-grid" data-disease-grid>
+            {% for disease in assignment_diseases %}
+              <label
+                class="sf-disease-choice{% if disease.selected %} is-selected{% endif %}"
+                data-disease-choice
+                data-disease-name="{{ disease.name|lower }}"
+              >
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="disease_ids"
+                  value="{{ disease.id }}"
+                  {% if disease.selected %}checked{% endif %}
+                  data-disease-checkbox
+                />
+                <span class="sf-disease-choice-body">
+                  <span class="sf-disease-choice-name">{{ disease.name }}</span>
+                  <span class="sf-disease-choice-meta">
+                    {% if disease.used %}
+                      Currently used in this symptom
+                    {% else %}
+                      Add this symptom to {{ disease.name }}
+                    {% endif %}
+                  </span>
+                </span>
+              </label>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="form-text">
+          Check diseases to add this symptom or uncheck them to remove it.
+        </div>
+      {% else %}
+        <label class="form-label">{{ form.disease_id.label.text }}</label>
+        {{ form.disease_id(class="form-select") }}
+        <div class="form-text">
+          You can leave this empty and connect the symptom to a disease later.
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="d-flex gap-2 flex-wrap">
+      {{ form.submit(class="btn btn-dark") }}
+      <a class="btn btn-outline-secondary" href="{{ url_for('admin.all_symptoms') }}">Cancel</a>
+    </div>
+  </form>
+</div>
+{% if mode == "edit" %}
+  <script>
+    (() => {
+      const picker = document.querySelector('[data-disease-picker]');
+      if (!picker) return;
+
+      const summary = picker.querySelector('[data-disease-summary]');
+      const choices = Array.from(picker.querySelectorAll('[data-disease-choice]'));
+
+      const updateSummary = () => {
+        const checked = choices.filter((choice) => choice.querySelector('[data-disease-checkbox]').checked);
+        summary.textContent = `${checked.length} disease selected`;
+        choices.forEach((choice) => {
+          const checkbox = choice.querySelector('[data-disease-checkbox]');
+          choice.classList.toggle('is-selected', checkbox.checked);
+        });
+      };
+
+      choices.forEach((choice) => {
+        choice.querySelector('[data-disease-checkbox]').addEventListener('change', updateSummary);
+      });
+
+      updateSummary();
+    })();
+  </script>
+{% endif %}
+{% endblock %}

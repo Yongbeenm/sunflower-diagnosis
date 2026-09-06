@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Disease Library • Sunflower Diagnosis{% endblock %}
+
+{% block content %}
+<div id="sf-library-react-root" class="min-h-[50vh]">
+  <div class="rounded-[28px] border border-white/60 bg-white/70 p-6 shadow-[0_24px_64px_rgba(36,56,29,0.14)] backdrop-blur dark:border-white/10 dark:bg-[#132017]/80">
+    <div class="h-10 w-52 animate-pulse rounded-full bg-[#dce9cf] dark:bg-white/10"></div>
+    <div class="mt-4 h-14 max-w-2xl animate-pulse rounded-[24px] bg-[#edf3e5] dark:bg-white/10"></div>
+    <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div class="h-72 animate-pulse rounded-[24px] bg-[#edf3e5] dark:bg-white/10"></div>
+      <div class="h-72 animate-pulse rounded-[24px] bg-[#edf3e5] dark:bg-white/10"></div>
+      <div class="h-72 animate-pulse rounded-[24px] bg-[#edf3e5] dark:bg-white/10"></div>
+    </div>
+  </div>
+</div>
+<script id="sf-library-data" type="application/json">{{ library_payload | tojson }}</script>
+{% endblock %}

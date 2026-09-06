@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}All Symptoms • Admin{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+  <div>
+    <h1 class="h3 mb-1">All symptoms</h1>
+    <div class="text-muted">Complete symptom list from all diseases in the system.</div>
+  </div>
+  <div class="d-flex gap-2">
+    <a class="btn btn-outline-dark" href="{{ url_for('admin.checklists') }}">Manage symptoms</a>
+    <a class="btn btn-outline-secondary" href="{{ url_for('admin.dashboard') }}">Admin dashboard</a>
+  </div>
+</div>
+
+<div class="mb-3">
+  <a class="btn btn-dark" href="{{ url_for('admin.add_system_symptom') }}">Add symptom</a>
+</div>
+
+<div class="card sf-card p-3 rounded-4">
+  {% if symptoms %}
+    <div class="small text-muted mb-2">Total unique symptoms: {{ symptoms|length }}</div>
+    <div class="table-responsive">
+      <table class="table align-middle mb-0">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Symptom</th>
+            <th>Used in</th>
+            <th>Diseases</th>
+            <th class="text-end">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in symptoms %}
+            <tr>
+              <td><span class="badge text-bg-secondary">{{ s.category }}</span></td>
+              <td>
+                <div class="fw-semibold">{{ s.label }}</div>
+                <div class="small text-muted">{{ s.label_km }}</div>
+              </td>
+              <td class="text-muted">
+                {% if s.disease_count %}
+                  {{ s.disease_count }} disease{{ '' if s.disease_count == 1 else 's' }}
+                {% else %}
+                  Not assigned
+                {% endif %}
+              </td>
+              <td class="small">
+                {% if s.disease_names %}
+                  {{ s.disease_names|join(', ') }}
+                {% else %}
+                  <span class="text-muted">No disease selected yet.</span>
+                {% endif %}
+              </td>
+              <td class="text-end">
+                <div class="sf-symptom-actions">
+                  <a class="btn btn-sm btn-dark" href="{{ url_for('admin.edit_system_symptom', label=s.label, category=s.category) }}">Edit</a>
+                  <form method="post" action="{{ url_for('admin.delete_system_symptom') }}" class="d-inline-block sf-delete-action" onsubmit="return confirm('Delete this symptom from all diseases?');">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                    <input type="hidden" name="label" value="{{ s.label }}"/>
+                    <input type="hidden" name="category" value="{{ s.category }}"/>
+                    <button class="btn btn-sm btn-outline-danger sf-btn-delete" type="submit">Delete</button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="text-muted">No symptoms available yet.</div>
+  {% endif %}
+</div>
+{% endblock %}

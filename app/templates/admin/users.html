@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Users • Admin{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+  <div>
+    <h1 class="h3 mb-1">Users</h1>
+    <div class="text-muted">View, change roles, or delete user accounts.</div>
+  </div>
+  <a class="btn btn-outline-dark" href="{{ url_for('admin.dashboard') }}">Back to dashboard</a>
+</div>
+
+<div class="card sf-card p-3 rounded-4">
+  {% if users %}
+    <div class="table-responsive">
+      <table class="table align-middle mb-0">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Created</th>
+            <th scope="col">Last report</th>
+            <th scope="col" class="text-end">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for u in users %}
+            <tr>
+              <td class="text-muted">{{ u.id }}</td>
+              <td class="fw-semibold"><span data-no-translate>{{ u.username }}</span></td>
+              <td class="text-muted">{{ u.email }}</td>
+              <td>
+                <span class="badge text-bg-{% if u.role == 'admin' %}success{% else %}secondary{% endif %}">
+                  {{ role_label(u.role) }}
+                </span>
+              </td>
+              <td class="text-muted small">{{ u.created_at.strftime("%Y-%m-%d") }}</td>
+              <td>
+                {% set last_check = latest_check_by_user.get(u.id) %}
+                {% if last_check %}
+                  <div class="fw-semibold">
+                    {{ last_check.top_disease_name or 'No match yet' }}
+                    {% if last_check.top_percent is not none %}
+                      <span class="text-muted small">({{ last_check.top_percent }}%)</span>
+                    {% endif %}
+                  </div>
+                  <div class="text-muted small">{{ last_check.created_at.strftime("%Y-%m-%d %H:%M") }}</div>
+                  <a class="btn btn-sm btn-outline-primary mt-2" href="{{ url_for('admin.symptom_check_detail', check_id=last_check.id) }}">View report</a>
+                {% else %}
+                  <span class="text-muted">No report yet</span>
+                {% endif %}
+              </td>
+              <td class="text-end">
+                <div class="d-inline-flex gap-2">
+                  <a class="btn btn-sm btn-outline-primary" href="{{ url_for('admin.edit_user', user_id=u.id) }}">Change role</a>
+                  <form method="post" action="{{ url_for('admin.delete_user_symptom_checks', user_id=u.id) }}" onsubmit="return confirm('Delete all symptom check history for {{ u.username }}?');">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                    <button type="submit" class="btn btn-sm btn-outline-warning" {% if current_user.id == u.id %}disabled{% endif %}>
+                      Clear history
+                    </button>
+                  </form>
+                  <form method="post" action="{{ url_for('admin.delete_user', user_id=u.id) }}" onsubmit="return confirm('Delete user {{ u.username }}? This will delete their symptom history too.');">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                    <button type="submit" class="btn btn-sm btn-outline-danger" {% if current_user.id == u.id %}disabled{% endif %}>
+                      Delete
+                    </button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="text-muted small mt-2">Tip: you cannot delete your own account while logged in.</div>
+  {% else %}
+    <div class="text-muted">No users found.</div>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Feedback • Sunflower Diagnosis{% endblock %}
+
+{% block content %}
+<div class="sf-page-head">
+  <div>
+    <div class="sf-page-kicker">No-Match Report</div>
+    <h1 class="sf-h1 mb-1">Tell us what symptom is missing</h1>
+    <div class="sf-muted">Your report helps Expert Sunflower users update symptom rules in the system.</div>
+  </div>
+</div>
+
+<div class="row g-3">
+  <div class="col-12 col-lg-8">
+    <div class="sf-panel">
+      <div class="sf-panel-head">
+        <div>
+          <div class="sf-panel-title">No disease match found</div>
+          <div class="sf-muted">Please describe observed symptoms and attach at least one photo.</div>
+        </div>
+      </div>
+      <form method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+
+        {% if linked_check %}
+        <div class="alert alert-warning">
+          <div class="fw-semibold mb-1">Linked symptom check #{{ linked_check.id }}</div>
+          <div class="small mb-1">
+            Submitted on {{ linked_check.created_at.strftime("%b %d, %Y %H:%M") }} with {{ linked_check.selected_count }} selected symptom(s).
+          </div>
+          <div class="small">No disease match was found. Photo evidence is required for this report.</div>
+          <div class="small">This report will be linked to your symptom check history.</div>
+        </div>
+        {% endif %}
+
+        <div class="mb-3">
+          {{ form.subject.label(class="form-label") }}
+          {{ form.subject(class="form-control", placeholder="Short subject") }}
+        </div>
+        <div class="mb-3">
+          {{ form.message.label(class="form-label") }}
+          {{ form.message(class="form-control", rows="5", placeholder="Example: I selected leaf wilting and stem cracking, but the plant also has black spots around head and no matching disease appeared.") }}
+        </div>
+        <div class="mb-3">
+          {{ form.photo.label(class="form-label") }}
+          {% if require_photo %}{{ form.photo(class="form-control", required=True) }}{% else %}{{ form.photo(class="form-control") }}{% endif %}
+          {% if require_photo %}
+          <div class="small text-danger mt-1">At least one photo is required for no-match symptom feedback.</div>
+          {% else %}
+          <div class="small text-muted mt-1">Optional. Upload a photo if it helps explain the issue.</div>
+          {% endif %}
+        </div>
+        <button type="submit" class="sf-primary-btn">Send no-match report</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
