@@ -36,5 +36,6 @@ __MACOSX/
 
 # Video demo recordings
 videos_10min/
+videos_admin/
 *.webm
 *.mp4
