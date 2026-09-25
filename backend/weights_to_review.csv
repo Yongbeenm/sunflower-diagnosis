@@ -1,0 +1,261 @@
+disease_slug,disease_name,category,symptom_code,symptom_label_en,symptom_label_km,weight,is_required,is_pathognomonic
+downy-mildew,Downy Mildew,leaf,yellow_spots_on_leaves,Yellow spots on leaves,ចំណុចពណ៌លឿងលើស្លឹក,0.50,False,False
+downy-mildew,Downy Mildew,leaf_head,white_fuzzy_mold,White fuzzy mold,ផ្សិតពណ៌សស្រួយ,0.50,False,False
+downy-mildew,Downy Mildew,whole_plant,stunted_growth,Stunted growth,លូតលាស់យឺត/ខ្លី,0.50,False,False
+downy-mildew,Downy Mildew,environment,cool_wet_conditions,"Cool, wet conditions",លក្ខខណ្ឌត្រជាក់ និងសើម,0.50,False,False
+alternaria-leaf-spot,Alternaria Leaf Spot,leaf,dark_brown_black_leaf_spots,Dark brown/black leaf spots,ចំណុចពណ៌ត្នោតចាស់/ខ្មៅលើស្លឹក,0.50,False,False
+alternaria-leaf-spot,Alternaria Leaf Spot,leaf,premature_leaf_drop,Premature leaf drop,ស្លឹកជ្រុះមុនពេល,0.50,False,False
+alternaria-leaf-spot,Alternaria Leaf Spot,leaf,yellow_spots_on_leaves,Yellow spots on leaves,ចំណុចពណ៌លឿងលើស្លឹក,0.50,False,False
+rust,Rust,leaf,orange_brown_rust_pustules,Orange/brown rust pustules,ពពុះច្រេះពណ៌ទឹកក្រូច/ត្នោត,0.50,False,False
+rust,Rust,leaf,premature_leaf_drop,Premature leaf drop,ស្លឹកជ្រុះមុនពេល,0.50,False,False
+rust,Rust,whole_plant,wilting_or_drooping,Wilting or drooping,ស្រពោន ឬ ទ្រេតធ្លាក់,0.50,False,False
+charcoal-rot,Charcoal Rot,whole_plant,wilting_or_drooping,Wilting or drooping,ស្រពោន ឬ ទ្រេតធ្លាក់,0.50,False,False
+charcoal-rot,Charcoal Rot,stem,brown_black_spots_or_lesions_on_stem,Brown/black spots or lesions on stem,ចំណុច ឬ ដំបៅពណ៌ត្នោត/ខ្មៅលើដើម,0.50,False,False
+charcoal-rot,Charcoal Rot,root,root_rot_poor_roots,Root rot / poor roots,ឫសរលួយ / ឫសខ្សោយ,0.50,False,False
+charcoal-rot,Charcoal Rot,environment,hot_dry_field_conditions,"Hot, dry field conditions",លក្ខខណ្ឌវាលក្តៅ និងស្ងួត,0.50,False,False
+white-mold,White Mold,leaf_head,white_fuzzy_mold,White fuzzy mold,ផ្សិតពណ៌សស្រួយ,0.50,False,False
+white-mold,White Mold,stem,soft_watery_stem_rot,Soft/watery stem rot,ដើមរលួយទន់/ជ្រាបទឹក,0.50,False,False
+white-mold,White Mold,head,rot_on_flower_head,Rot on flower head,រលួយលើក្បាលផ្កា,0.50,False,False
+white-mold,White Mold,whole_plant,wilting_or_drooping,Wilting or drooping,ស្រពោន ឬ ទ្រេតធ្លាក់,0.50,False,False
+white-mold,White Mold,environment,cool_wet_conditions,"Cool, wet conditions",លក្ខខណ្ឌត្រជាក់ និងសើម,0.50,False,False
+bacterial-head-rot,Bacterial Head Rot,head,rot_on_flower_head,Rot on flower head,រលួយលើក្បាលផ្កា,0.50,False,False
+bacterial-head-rot,Bacterial Head Rot,stem,soft_watery_stem_rot,Soft/watery stem rot,ដើមរលួយទន់/ជ្រាបទឹក,0.50,False,False
+bacterial-head-rot,Bacterial Head Rot,environment,cool_wet_conditions,"Cool, wet conditions",លក្ខខណ្ឌត្រជាក់ និងសើម,0.50,False,False
+rhizopus-head-rot,Rhizopus Head Rot,head,soft_watery_rot_on_the_head,"Soft, watery rot on the head",ក្បាលរលួយទន់ និងសើម,0.50,False,False
+rhizopus-head-rot,Rhizopus Head Rot,head,head_becomes_brown_and_mushy,Head becomes brown and mushy,ក្បាលប្រែពណ៌ត្នោត និងទន់,0.50,False,False
+rhizopus-head-rot,Rhizopus Head Rot,head,white_cotton_like_fungal_growth_appears,"White, cotton-like fungal growth appears",មានផ្សិតពណ៌ស ដូចសំឡី,0.50,False,False
+rhizopus-head-rot,Rhizopus Head Rot,head,black_spore_structures_may_develop_powdery_appearance,Black spore structures may develop (powdery appearance),អាចមានម្សៅខ្មៅ (spores),0.50,False,False
+rhizopus-head-rot,Rhizopus Head Rot,seedling,seeds_become_soft_rotten_and_unusable,"Seeds become soft, rotten, and unusable",គ្រាប់ទន់ រលួយ និងមិនអាចប្រើបាន,0.50,False,False
+rhizopus-head-rot,Rhizopus Head Rot,seedling,seed_loss_is_significant,Seed loss is significant,បាត់បង់គ្រាប់ច្រើន,0.50,False,False
+rhizopus-head-rot,Rhizopus Head Rot,whole_plant,head_droops_or_collapses,Head droops or collapses,ក្បាលធ្លាក់ ឬបាក់,0.50,False,False
+rhizopus-head-rot,Rhizopus Head Rot,environment,warm_temperatures,Warm temperatures,សីតុណ្ហភាពក្តៅ,0.50,False,False
+rhizopus-head-rot,Rhizopus Head Rot,environment,high_humidity,High humidity,សំណើមខ្ពស់,0.50,False,False
+rhizopus-head-rot,Rhizopus Head Rot,environment,wet_conditions_especially_during_flowering_stage,"Wet conditions, especially during flowering stage",ស្ថានភាពសើម (ពិសេសពេលចេញផ្កា),0.50,False,False
+rhizopus-head-rot,Rhizopus Head Rot,environment,infection_often_occurs_after_insect_or_mechanical_damage,Infection often occurs after insect or mechanical damage,ជំងឺកើតបន្ទាប់ពីមានរបួសពីសត្វល្អិត ឬការប៉ះទង្គិច,0.50,False,False
+sclerotinia-head-rot,Sclerotinia Head Rot,head,white_cotton_like_fungal_growth_on_head,"White, cotton-like fungal growth on head",មានផ្សិតពណ៌ស ដូចសំឡី,0.50,False,False
+sclerotinia-head-rot,Sclerotinia Head Rot,head,head_becomes_soft_and_water_soaked,Head becomes soft and water-soaked,ក្បាលទន់ និងសើម,0.50,False,False
+sclerotinia-head-rot,Sclerotinia Head Rot,head,brown_rot_develops_under_the_white_mold,Brown rot develops under the white mold,រលួយពណ៌ត្នោតក្រោមផ្សិតស,0.50,False,False
+sclerotinia-head-rot,Sclerotinia Head Rot,head,head_collapses,head collapses,ក្បាលអាចធ្លាក់,0.50,False,False
+sclerotinia-head-rot,Sclerotinia Head Rot,seedling,seeds_become_soft_shriveled_and_moldy,"Seeds become soft, shriveled, and moldy",គ្រាប់ទន់ ចាស់ និងមានផ្សិត,0.50,False,False
+sclerotinia-head-rot,Sclerotinia Head Rot,whole_plant,head_droops_or_collapses,Head droops or collapses,ក្បាលធ្លាក់ ឬបាក់,0.50,False,False
+sclerotinia-head-rot,Sclerotinia Head Rot,environment,cool_to_moderate_temperatures,Cool to moderate temperatures,សីតុណ្ហភាពត្រជាក់ទៅមធ្យម,0.50,False,False
+sclerotinia-head-rot,Sclerotinia Head Rot,environment,high_humidity,High humidity,សំណើមខ្ពស់,0.50,False,False
+sclerotinia-head-rot,Sclerotinia Head Rot,environment,wet_conditions_especially_during_flowering,"Wet conditions, especially during flowering",មានសំណើមពេលចេញផ្កា,0.50,False,False
+sclerotinia-head-rot,Sclerotinia Head Rot,environment,infection_often_occurs_after_mechanical_damage_or_insect_feeding,Infection often occurs after mechanical damage or insect feeding,Infection often occurs after mechanical damage or insect feeding,0.50,False,False
+phoma-black-stem,Phoma Black Stem,leaf,dark_brown_to_black_spots,Dark brown to black spots,មានស្នាមពណ៌ត្នោតចាស់ទៅខ្មៅ,0.50,False,False
+phoma-black-stem,Phoma Black Stem,leaf,yellowing_around_the_spots,Yellowing around the spots,មានពណ៌លឿងជុំវិញស្នាម,0.50,False,False
+phoma-black-stem,Phoma Black Stem,stem,black_lesions_on_the_stem,Black lesions on the stem,មានស្នាមខ្មៅលើដើម,0.50,False,False
+phoma-black-stem,Phoma Black Stem,stem,stem_becomes_dark_and_weak,Stem becomes dark and weak,ដើមខ្មៅខ្លាំង និងខ្សោយ,0.50,False,False
+phoma-black-stem,Phoma Black Stem,stem,lesions_may_expand_and_cause_stem_cracking,Lesions may expand and cause stem cracking,ស្នាមអាចពង្រីក និងបណ្តាលឲ្យដើមបែក,0.50,False,False
+phoma-black-stem,Phoma Black Stem,whole_plant,premature_drying,Premature drying,ស្ងួតមុនអាយុ,0.50,False,False
+phoma-black-stem,Phoma Black Stem,whole_plant,reduced_plant_vigor,Reduced plant vigor,ការលូតលាស់រុក្ខជាតិថយចុះ,0.50,False,False
+phoma-black-stem,Phoma Black Stem,environment,cool_to_moderate_temperatures,Cool to moderate temperatures,សីតុណ្ហភាពត្រជាក់ទៅមធ្យម,0.50,False,False
+phoma-black-stem,Phoma Black Stem,environment,wet_and_humid_conditions,Wet and humid conditions,សំណើមខ្ពស់ និងសើម,0.50,False,False
+phoma-black-stem,Phoma Black Stem,environment,frequent_rain_or_moisture,Frequent rain or moisture,មានភ្លៀងញឹកញាប់,0.50,False,False
+phomopsis-stem-canker,Phomopsis Stem Canker,stem,small_dark_brown_to_black_lesions_on_stem,Small dark brown to black lesions on stem,មានស្នាមត្នោតទៅខ្មៅតូចលើដើម,0.50,False,False
+phomopsis-stem-canker,Phomopsis Stem Canker,stem,stem_becomes_weak_and_may_break,Stem becomes weak and may break,ដើមខ្សោយ និងអាចបាក់,0.50,False,False
+phomopsis-stem-canker,Phomopsis Stem Canker,leaf,yellowing_near_the_stem_lesions,Yellowing near the stem lesions,ស្លឹកលឿងនៅជិតស្នាមដើម,0.50,False,False
+phomopsis-stem-canker,Phomopsis Stem Canker,leaf,leaf_drop,leaf drop,ជ្រុះស្លឹក,0.50,False,False
+phomopsis-stem-canker,Phomopsis Stem Canker,seedling,poor_seed_formation_if_disease_is_severe,Poor seed formation if disease is severe,ការបង្កើតគ្រាប់អន់ (ករណីធ្ងន់),0.50,False,False
+phomopsis-stem-canker,Phomopsis Stem Canker,environment,cool_to_moderate_temperatures,Cool to moderate temperatures,សីតុណ្ហភាពត្រជាក់ទៅមធ្យម,0.50,False,False
+phomopsis-stem-canker,Phomopsis Stem Canker,environment,high_humidity_or_wet_conditions,High humidity or wet conditions,សំណើមខ្ពស់ ឬសើម,0.50,False,False
+fusarium-wilt,Fusarium Wilt,leaf,yellowing_starts_from_lower_leaves,Yellowing starts from lower leaves,ស្លឹកលឿងចាប់ពីស្លឹកក្រោម,0.50,False,False
+fusarium-wilt,Fusarium Wilt,leaf,leaves_may_wilt_even_when_soil_is_moist,Leaves may wilt even when soil is moist,ស្លឹកក្រៀមស្វិតទោះបីជាដីសើម,0.50,False,False
+fusarium-wilt,Fusarium Wilt,leaf,leaf_margins_may_turn_brown,Leaf margins may turn brown,ជ្រុងស្លឹកប្រែពណ៌ត្នោត,0.50,False,False
+fusarium-wilt,Fusarium Wilt,stem,brown_streaks_inside_stem_vascular_discoloration,Brown streaks inside stem (vascular discoloration),មានច្រមុះពណ៌ត្នោតនៅខាងក្នុងដើម (vascular discoloration),0.50,False,False
+fusarium-wilt,Fusarium Wilt,stem,stem_may_become_weak_and_collapse,Stem may become weak and collapse,ដើមខ្សោយ និងអាចបាក់,0.50,False,False
+fusarium-wilt,Fusarium Wilt,root,roots_may_rot_and_turn_brown,Roots may rot and turn brown,ឫសរលួយ និងប្រែពណ៌ត្នោត,0.50,False,False
+fusarium-wilt,Fusarium Wilt,whole_plant,wilting_of_whole_plant_starting_from_bottom,"Wilting of whole plant, starting from bottom",ក្រៀមស្វិតចាប់ពីផ្នែកក្រោម,0.50,False,False
+fusarium-wilt,Fusarium Wilt,whole_plant,stunted_growth,Stunted growth,លូតលាស់យឺត,0.50,False,False
+fusarium-wilt,Fusarium Wilt,whole_plant,plant_may_die_in_severe_cases,Plant may die in severe cases,Plant may die in severe cases,0.50,False,False
+fusarium-wilt,Fusarium Wilt,environment,warm_temperatures,Warm temperatures,សីតុណ្ហភាពក្តៅ,0.50,False,False
+fusarium-wilt,Fusarium Wilt,environment,dry_or_drought_prone_soil,Dry or drought-prone soil,ដីស្ងួត,0.50,False,False
+fusarium-wilt,Fusarium Wilt,environment,poorly_drained_soil,Poorly drained soil,ដីដែលបង្ហូរទឹកមិនបានល្អ,0.50,False,False
+powdery-mildew,Powdery Mildew,leaf,white_powdery_patches_on_upper_surfaces,White powdery patches on upper surfaces,ស្លឹកមានម្សៅពណ៌សនៅលើផ្ទៃខាងលើ,0.50,False,False
+powdery-mildew,Powdery Mildew,leaf,leaves_yellow_curl_drop_in_severe_cases,"Leaves yellow, curl, drop in severe cases",ស្លឹកមានពណ៌លឿង រួញ និងជ្រុះក្នុងករណីធ្ងន់ធ្ងរ,0.50,False,False
+powdery-mildew,Powdery Mildew,stem,fine_white_or_gray_dust_on_stems,Fine white or gray dust on stems,មានធូលីពណ៌ស ឬពណ៌ប្រផេះល្អិតៗនៅលើដើម,0.50,False,False
+powdery-mildew,Powdery Mildew,stem,plants_may_appear_slightly_chalky_where_mildew_occurs,Plants may appear slightly chalky where mildew occurs,ដើមអាចមើលទៅមានសភាពស្លេកស្លាំងបន្តិចនៅកន្លែងដែលមានផ្សិត,0.50,False,False
+powdery-mildew,Powdery Mildew,whole_plant,slower_growth,Slower growth,លូតលាស់យឺត,0.50,False,False
+powdery-mildew,Powdery Mildew,whole_plant,smaller_head,Smaller head,ក្បាលតូច,0.50,False,False
+powdery-mildew,Powdery Mildew,environment,high_relative_humidity,High relative humidity,សំណើមខ្ពស់,0.50,False,False
+powdery-mildew,Powdery Mildew,environment,moderate_warm_days,Moderate warm days,ថ្ងៃក្តៅល្មម,0.50,False,False
+alternaria-blight,Alternaria Blight,leaf,dark_brown_to_black_spots_with_concentric_ring,Dark brown to black spots with concentric ring,ចំណុចពណ៌ខ្មៅ និងពណ៌ត្នោតចាស់,0.50,False,False
+alternaria-blight,Alternaria Blight,leaf,spots_enlarge_and_merge,Spots enlarge and merge,ចំណុចៗរីកធំឡើង និងបញ្ចូលគ្នា,0.50,False,False
+alternaria-blight,Alternaria Blight,leaf,leaves_turn_yellow_and_dry,Leaves turn yellow and dry,ស្លឹកប្រែជាពណ៌លឿង និងស្ងួត,0.50,False,False
+alternaria-blight,Alternaria Blight,stem,elongated_black_lesions_on_stem,Elongated black lesions on stem,ដំបៅខ្មៅវែងនៅលើដើម,0.50,False,False
+alternaria-blight,Alternaria Blight,stem,stem_may_weaken_in_severe_cases,Stem may weaken in severe cases,ដើមអាចចុះខ្សោយក្នុងករណីធ្ងន់ធ្ងរ,0.50,False,False
+alternaria-blight,Alternaria Blight,whole_plant,premature_leaf_drop,Premature leaf drop,ជ្រុះស្លឹកមុនអាយុ,0.50,False,False
+alternaria-blight,Alternaria Blight,whole_plant,slower_growth,Slower growth,ការលូតលាស់យឺត,0.50,False,False
+alternaria-blight,Alternaria Blight,whole_plant,smaller_head,Smaller head,ក្បាលតូច,0.50,False,False
+alternaria-blight,Alternaria Blight,environment,warm,Warm,ថ្ងៃក្តៅល្មម,0.50,False,False
+alternaria-blight,Alternaria Blight,environment,humid,Humid,សំណើម,0.50,False,False
+alternaria-blight,Alternaria Blight,environment,rainy,Rainy,ភ្លៀងធ្លាក់,0.50,False,False
+septoria-leaf-spot,Septoria Leaf Spot,leaf,small_brown_spots,Small brown spots,មានចំណុចពណ៌ត្នោតតូចៗ,0.50,False,False
+septoria-leaf-spot,Septoria Leaf Spot,leaf,spots_have_gray_center_with_black_edges,Spots have gray center with black edges,ផ្ទៃកណ្ដាលមានពណ៌ប្រផេះ និងគែមពណ៌ខ្មៅ,0.50,False,False
+septoria-leaf-spot,Septoria Leaf Spot,leaf,tiny_black_dots_appear_inside_spots,Tiny black dots appear inside spots,មានចំណុចខ្មៅតូចៗនៅក្នុងស្នាម,0.50,False,False
+septoria-leaf-spot,Septoria Leaf Spot,leaf,lower_leaves_infected_first,Lower leaves infected first,ស្លឹកក្រោមឆ្លងមុន,0.50,False,False
+septoria-leaf-spot,Septoria Leaf Spot,leaf,leaves_turn_yellow_and_fall_early,Leaves turn yellow and fall early,ស្លឹកលឿង ហើយធ្លាក់មុនពេល,0.50,False,False
+septoria-leaf-spot,Septoria Leaf Spot,stem,elongated_black_lesions_on_stem,Elongated black lesions on stem,ដំបៅខ្មៅវែងនៅលើដើម,0.50,False,False
+septoria-leaf-spot,Septoria Leaf Spot,whole_plant,premature_leaf_drop,Premature leaf drop,ជ្រុះស្លឹកមុនអាយុ,0.50,False,False
+septoria-leaf-spot,Septoria Leaf Spot,whole_plant,slower_growth,Slower growth,ការលូតលាស់យឺត,0.50,False,False
+septoria-leaf-spot,Septoria Leaf Spot,environment,warm,Warm,ថ្ងៃក្តៅល្មម,0.50,False,False
+septoria-leaf-spot,Septoria Leaf Spot,environment,humid,Humid,សំណើម,0.50,False,False
+septoria-leaf-spot,Septoria Leaf Spot,environment,rainy,Rainy,ភ្លៀងធ្លាក់,0.50,False,False
+cercospora-leaf-spot,Cercospora Leaf Spot,leaf,small_brown_to_gray_spots,Small brown to gray spots,មានចំណុចពណ៌ត្នោត ឬ ពណ៌ប្រផេះតូចៗ,0.50,False,False
+cercospora-leaf-spot,Cercospora Leaf Spot,leaf,spots_enlarge_and_merge,Spots enlarge and merge,ចំណុចរីកធំ ហើយភ្ជាប់គ្នា,0.50,False,False
+cercospora-leaf-spot,Cercospora Leaf Spot,leaf,leaves_turn_yellow_and_dry,Leaves turn yellow and dry,ស្លឹកលឿង និងស្ងួត,0.50,False,False
+cercospora-leaf-spot,Cercospora Leaf Spot,stem,dark_spots_or_lesions,Dark spots or lesions,មានស្នាមខ្មៅលើដើម,0.50,False,False
+cercospora-leaf-spot,Cercospora Leaf Spot,whole_plant,early_leaf_drop,Early leaf drop,ជ្រុះស្លឹកមុនអាយុ,0.50,False,False
+cercospora-leaf-spot,Cercospora Leaf Spot,whole_plant,slower_growth,Slower growth,ការលូតលាស់យឺត,0.50,False,False
+cercospora-leaf-spot,Cercospora Leaf Spot,environment,warm,Warm,ថ្ងៃក្តៅល្មម,0.50,False,False
+cercospora-leaf-spot,Cercospora Leaf Spot,environment,humid,Humid,សំណើម,0.50,False,False
+cercospora-leaf-spot,Cercospora Leaf Spot,environment,wet,Wet,សើម,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,leaf,water_soaked_spots,Water-soaked spots,ស្នាមសើមដូចជាទឹក,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,leaf,leaves_turn_brown_and_rot,Leaves turn brown and rot,ស្លឹកពណ៌ត្នោត និងរលួយ,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,leaf,gray_fuzzy_mold_appears,Gray fuzzy mold appears,មានផ្សិតពណ៌ប្រផេះ,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,stem,soft_rot_on_stem,Soft rot on stem,ដើមរលួយទន់,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,stem,stem_becomes_weak_and_may_collapse,Stem becomes weak and may collapse,ដើមខ្សោយ និងអាចបាក់,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,stem,covered_with_gray_mold,Covered with gray mold,គ្របដោយផ្សិតប្រផេះ,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,head,brown_soft_rot_on_head,Brown soft rot on head,ក្បាលផ្ការលួយ ទន់ និងមានពណ៌ត្នោត,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,head,gray_fuzzy_mold_covers_flower,Gray fuzzy mold covers flower,មានផ្សិតប្រផេះគ្របដណ្ដប់់,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,head,head_may_decay_or_collapse,Head may decay or collapse,ផ្កាអាចខូច ឬធ្លាក់,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,head,seeds_may_rot,Seeds may rot,គ្រាប់អាចរលួយ,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,whole_plant,wilting,Wilting,រុក្ខជាតិឈឺ និងជ្រុះស្លឹក,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,whole_plant,plant_decay_in_severe_cases,Plant decay in severe cases,រលួយក្នុងករណីធ្ងន់,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,whole_plant,slower_growth,Slower growth,ការលូតលាស់ថយចុះ,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,environment,cool,Cool,ត្រជាក់,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,environment,humid,Humid,សំណើមខ្ពស់,0.50,False,False
+botrytis-gray-mold,Botrytis Gray Mold,environment,wet,Wet,សើម,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,leaf,small_water_soaked_spots,Small water-soaked spots,ស្នាមសើមដូចទឹកតូចៗ,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,leaf,spots_turn_brown_to_black,Spots turn brown to black,ប្រែក្លាយជាពណ៌ត្នោត ឬ ខ្មៅ,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,leaf,yellow_halo_around_spots,Yellow halo around spots,មានពណ៌លឿងជុំវិញស្នាម,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,leaf,spots_may_merge_and_dry,Spots may merge and dry,ស្នាមអាចភ្ជាប់គ្នា និងស្ងួត,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,stem,dark_streaks_or_lesions,Dark streaks or lesions,មានស្នាម ឬ ខ្សែពណ៌ងងឹត,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,stem,may_become_weak_in_severe_cases,May become weak in severe cases,អាចខ្សោយនៅពេលធ្ងន់ធ្ងរ,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,head,may_show_small_dark_spots_in_severe_cases,May show small dark spots in severe cases,អាចមានចំណុចខ្មៅតូចៗនៅករណីធ្ងន់,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,whole_plant,leaf_drop,Leaf drop,ជ្រុះស្លឹក,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,whole_plant,poor_plant_vigor,Poor plant vigor,រុក្ខជាតិខ្សោយ,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,whole_plant,slower_growth,Slower growth,ការលូតលាស់ថយចុះ,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,environment,warm,Warm,ក្តៅ,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,environment,humid,Humid,សំណើមខ្ពស់,0.50,False,False
+bacterial-leaf-spot,Bacterial Leaf Spot,environment,wet,Wet,សើម,0.50,False,False
+bacterial-blight,Bacterial Blight,leaf,water_soaked_spots,Water-soaked spots,ស្នាមសើមដូចទឹក,0.50,False,False
+bacterial-blight,Bacterial Blight,leaf,spots_turn_dark_brown_or_black,Spots turn dark brown or black,ប្រែក្លាយជាពណ៌ត្នោត ឬ ខ្មៅ,0.50,False,False
+bacterial-blight,Bacterial Blight,leaf,irregular_lesions_with_yellow_halo,Irregular lesions with yellow halo,ស្នាមមិនទៀងទាត់ មានពណ៌លឿងជុំវិញ,0.50,False,False
+bacterial-blight,Bacterial Blight,leaf,leaves_dry_and_tear,Leaves dry and tear,ស្លឹកស្ងួត និងបែក,0.50,False,False
+bacterial-blight,Bacterial Blight,stem,dark_streaks_or_lesions,Dark streaks or lesions,មានស្នាម ឬ ខ្សែពណ៌ងងឹត,0.50,False,False
+bacterial-blight,Bacterial Blight,stem,stem_may_weaken,Stem may weaken,អាចខ្សោយ,0.50,False,False
+bacterial-blight,Bacterial Blight,head,small_dark_spots_on_head,Small dark spots on head,មានចំណុចខ្មៅតូចៗ,0.50,False,False
+bacterial-blight,Bacterial Blight,head,may_cause_head_rot_in_severe_cases,May cause head rot in severe cases,អាចបណ្តាលឲ្យក្បាលផ្ការលួយនៅករណីធ្ងន់,0.50,False,False
+bacterial-blight,Bacterial Blight,whole_plant,wilting,Wilting,ស្រពោន,0.50,False,False
+bacterial-blight,Bacterial Blight,whole_plant,leaf_drop,Leaf drop,ស្លឹកជ្រុះ,0.50,False,False
+bacterial-blight,Bacterial Blight,whole_plant,reduced_growth,Reduced growth,លូតលាស់យឺត,0.50,False,False
+bacterial-blight,Bacterial Blight,environment,cool,Cool,ត្រជាក់,0.50,False,False
+bacterial-blight,Bacterial Blight,environment,humid,Humid,សំណើមខ្ពស់,0.50,False,False
+bacterial-blight,Bacterial Blight,environment,wet,Wet,សើម,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,leaf,leaves_may_wilt,Leaves may wilt,ស្លឹកស្រពោន,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,leaf,yellowing_in_advanced_stage,Yellowing in advanced stage,មានពណ៌លឿងនៅដំណាក់កាលធ្ងន់,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,stem,soft_watery_rot_on_stem,"Soft, watery rot on stem",ដើមរលួយទន់ និងសើម,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,stem,stem_becomes_mushy_and_collapses,Stem becomes mushy and collapses,ដើមប្រែជាទន់ និងបាក់,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,stem,foul_smell_from_infected_tissue,Foul smell from infected tissue,មានក្លិនអាក្រក់,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,root,may_show_soft_rot_in_severe_cases,May show soft rot in severe cases,អាចរលួយនៅករណីធ្ងន់,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,head,head_may_rot_and_become_soft,Head may rot and become soft,ក្បាលផ្ការលួយ និងទន់,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,head,foul_smell_in_severe_infection,Foul smell in severe infection,មានក្លិនអាក្រក់,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,whole_plant,sudden_wilting,Sudden wilting,ស្រពោនភ្លាមៗ,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,whole_plant,plant_collapse,Plant collapse,ដំណាំបាក់,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,whole_plant,rapid_decay,Rapid decay,រលួយលឿន,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,environment,warm,Warm,ក្តៅ,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,environment,high_humidity,High humidity,សើម,0.50,False,False
+bacterial-stem-rot,Bacterial Stem Rot,environment,wet,Wet,សំណើមខ្ពស់,0.50,False,False
+bacterial-wilt,Bacterial Wilt,leaf,sudden_wilting,Sudden wilting,ស្លឹកស្រពោនភ្លាមៗ,0.50,False,False
+bacterial-wilt,Bacterial Wilt,leaf,leaves_turn_yellow,Leaves turn yellow,មានពណ៌លឿង,0.50,False,False
+bacterial-wilt,Bacterial Wilt,leaf,leaves_may_dry,Leaves may dry,ស្លឹកអាចស្ងួត,0.50,False,False
+bacterial-wilt,Bacterial Wilt,stem,brown_discoloration_in_vascular_tissue,Brown discoloration in vascular tissue,ពណ៌ត្នោតនៅក្នុងសរសៃដើម,0.50,False,False
+bacterial-wilt,Bacterial Wilt,stem,sticky_bacterial_ooze_may_appear,Sticky bacterial ooze may appear,អាចមានទឹករាវដែលចេញពីបាក់តេរី,0.50,False,False
+bacterial-wilt,Bacterial Wilt,root,roots_may_turn_brown,Roots may turn brown,ឫសអាចប្រែពណ៌ត្នោត,0.50,False,False
+bacterial-wilt,Bacterial Wilt,root,reduced_root_health,Reduced root health,សុខភាពឫសថយចុះ,0.50,False,False
+bacterial-wilt,Bacterial Wilt,head,head_becomes_small,Head becomes small,ក្បាលតូច,0.50,False,False
+bacterial-wilt,Bacterial Wilt,head,poor_seed_development,Poor seed development,ការបង្កើតគ្រាប់មិនល្អ,0.50,False,False
+bacterial-wilt,Bacterial Wilt,whole_plant,sudden_wilting_of_entire_plant,Sudden wilting of entire plant,ស្រពោនភ្លាមៗ,0.50,False,False
+bacterial-wilt,Bacterial Wilt,whole_plant,plant_death,Plant death,ដំណាំងាប់,0.50,False,False
+bacterial-wilt,Bacterial Wilt,whole_plant,stunted_growth,Stunted growth,ក្រឹន,0.50,False,False
+bacterial-wilt,Bacterial Wilt,environment,warm,Warm,ក្តៅ,0.50,False,False
+bacterial-wilt,Bacterial Wilt,environment,wet,Wet,សើម,0.50,False,False
+bacterial-wilt,Bacterial Wilt,environment,high_humidity,High humidity,សំណើមខ្ពស់,0.50,False,False
+crown-gall,Crown Gall,leaf,leaves_may_appear_normal_at_early_stage,Leaves may appear normal at early stage,ដំបូងៗស្លឹកមើលទៅធម្មតា,0.50,False,False
+crown-gall,Crown Gall,leaf,yellowing_and_wilting_in_severe_cases,Yellowing and wilting in severe cases,ស្លឹកលឿង និងស្រពោននៅពេលធ្ងន់,0.50,False,False
+crown-gall,Crown Gall,stem,swollen_tumor_like_growth_galls_near_base,Swollen tumor-like growth (galls) near base,មានដុំធំៗ (galls) នៅជិតគល់ដើម,0.50,False,False
+crown-gall,Crown Gall,stem,stem_may_become_weak,Stem may become weak,ដើមអាចខ្សោយ,0.50,False,False
+crown-gall,Crown Gall,root,galls_rough_hard_swellings_on_roots,"Galls (rough, hard swellings) on roots",មានដុំរឹងៗលើឫស,0.50,False,False
+crown-gall,Crown Gall,root,roots_function_poorly,Roots function poorly,ឫសដំណើរការមិនល្អ,0.50,False,False
+crown-gall,Crown Gall,head,head_becomes_small,Head becomes small,ក្បាលតូច,0.50,False,False
+crown-gall,Crown Gall,head,reduced_seed_formation,Reduced seed formation,ការបង្កើតគ្រាប់មិនល្អ,0.50,False,False
+crown-gall,Crown Gall,whole_plant,stunted_growth,Stunted growth,ក្រឹន,0.50,False,False
+crown-gall,Crown Gall,whole_plant,poor_vigor,Poor vigor,រុក្ខជាតិខ្សោយ,0.50,False,False
+crown-gall,Crown Gall,environment,warm,Warm,ក្តៅ,0.50,False,False
+crown-gall,Crown Gall,environment,moist_soil,Moist soil,ដីសើម,0.50,False,False
+crown-gall,Crown Gall,environment,wounded_plants_increase_infection,Wounded plants increase infection,របួសលើដំណាំធ្វើឲ្យឆ្លងងាយ,0.50,False,False
+mosaic-virus,Mosaic Virus,leaf,light_and_dark_green_mosaic_pattern,Light and dark green mosaic pattern,មានពណ៌បៃតងស្រាល និងចាស់បញ្ចូលគ្នា (mosaic),0.50,False,False
+mosaic-virus,Mosaic Virus,leaf,leaves_may_curl_or_distort,Leaves may curl or distort,ស្លឹកអាចកោង ឬ ប្រែទ្រង់ទ្រាយ,0.50,False,False
+mosaic-virus,Mosaic Virus,leaf,yellow_patches_appear,Yellow patches appear,មានតំបន់ពណ៌លឿង,0.50,False,False
+mosaic-virus,Mosaic Virus,stem,stunted_stem_growth,Stunted stem growth,ការលូតលាស់យឺត,0.50,False,False
+mosaic-virus,Mosaic Virus,stem,may_become_weak,May become weak,ដើមអាចខ្សោយ,0.50,False,False
+mosaic-virus,Mosaic Virus,head,smaller_flower_head,Smaller flower head,ក្បាលតូច,0.50,False,False
+mosaic-virus,Mosaic Virus,head,poor_seed_development,Poor seed development,ការបង្កើតគ្រាប់មិនល្អ,0.50,False,False
+mosaic-virus,Mosaic Virus,head,deformed_head,Deformed head,ក្បាលខូចទ្រង់ទ្រាយ,0.50,False,False
+mosaic-virus,Mosaic Virus,whole_plant,stunted_growth,Stunted growth,ការលូតលាស់យឺត,0.50,False,False
+mosaic-virus,Mosaic Virus,whole_plant,reduced_vigor,Reduced vigor,រុក្ខជាតិខ្សោយ,0.50,False,False
+mosaic-virus,Mosaic Virus,environment,warm,Warm,ក្តៅ,0.50,False,False
+mosaic-virus,Mosaic Virus,environment,spread_by_insects_aphids,Spread by insects (aphids),រាលដាលដោយសត្វល្អិត (aphids),0.50,False,False
+mosaic-virus,Mosaic Virus,environment,field_with_infected_plants,Field with infected plants,មានដំណាំឆ្លងក្នុងវាល,0.50,False,False
+tobacco-ring-spot-virus,Tobacco Ring Spot Virus,leaf,yellow_rings_or_spots,Yellow rings or spots,មានរង្វង់ពណ៌លឿង ឬ ចំណុចលឿង,0.50,False,False
+tobacco-ring-spot-virus,Tobacco Ring Spot Virus,leaf,chlorotic_yellow_patterns,Chlorotic (yellow) patterns,មានលំនាំពណ៌លឿងលើស្លឹក,0.50,False,False
+tobacco-ring-spot-virus,Tobacco Ring Spot Virus,leaf,leaf_distortion,Leaf distortion,ស្លឹកបែកទ្រង់ទ្រាយ,0.50,False,False
+tobacco-ring-spot-virus,Tobacco Ring Spot Virus,stem,stunted_growth,Stunted growth,ការលូតលាស់យឺត,0.50,False,False
+tobacco-ring-spot-virus,Tobacco Ring Spot Virus,stem,stem_may_be_weak,Stem may be weak,ដើមអាចខ្សោយ,0.50,False,False
+tobacco-ring-spot-virus,Tobacco Ring Spot Virus,head,small_or_deformed_head,Small or deformed head,ក្បាលតូច ឬ ខូចទ្រង់ទ្រាយ,0.50,False,False
+tobacco-ring-spot-virus,Tobacco Ring Spot Virus,head,poor_seed_formation,Poor seed formation,ការបង្កើតគ្រាប់មិនល្អ,0.50,False,False
+tobacco-ring-spot-virus,Tobacco Ring Spot Virus,whole_plant,stunted_growth,Stunted growth,ការលូតលាស់យឺត,0.50,False,False
+tobacco-ring-spot-virus,Tobacco Ring Spot Virus,whole_plant,reduced_vigor,Reduced vigor,រុក្ខជាតិខ្សោយ,0.50,False,False
+tobacco-ring-spot-virus,Tobacco Ring Spot Virus,environment,warm,Warm,ក្តៅ,0.50,False,False
+tobacco-ring-spot-virus,Tobacco Ring Spot Virus,environment,spread_by_nematodes_and_insects,Spread by nematodes and insects,រាលដាលដោយ nematodes និងសត្វល្អិត,0.50,False,False
+tobacco-ring-spot-virus,Tobacco Ring Spot Virus,environment,infected_soil,Infected soil,ដីមានជំងឺ,0.50,False,False
+cucumber-mosaic-virus,Cucumber Mosaic Virus,leaf,mosaic_pattern_light_and_dark_green,Mosaic pattern (light and dark green),មានលំនាំពណ៌បៃតងស្រាល និងចាស់ (mosaic),0.50,False,False
+cucumber-mosaic-virus,Cucumber Mosaic Virus,leaf,yellow_patches,Yellow patches,មានតំបន់ពណ៌លឿង,0.50,False,False
+cucumber-mosaic-virus,Cucumber Mosaic Virus,leaf,leaves_may_curl_or_become_narrow,Leaves may curl or become narrow,ស្លឹកអាចកោង ឬ ស្តើង,0.50,False,False
+cucumber-mosaic-virus,Cucumber Mosaic Virus,stem,stunted_growth,Stunted growth,ការលូតលាស់យឺត,0.50,False,False
+cucumber-mosaic-virus,Cucumber Mosaic Virus,stem,weak_stem,Weak stem,ដើមខ្សោយ,0.50,False,False
+cucumber-mosaic-virus,Cucumber Mosaic Virus,head,small_or_deformed_head,Small or deformed head,ក្បាលតូច ឬ ខូចទ្រង់ទ្រាយ,0.50,False,False
+cucumber-mosaic-virus,Cucumber Mosaic Virus,head,poor_seed_formation,Poor seed formation,ការបង្កើតគ្រាប់មិនល្អ,0.50,False,False
+cucumber-mosaic-virus,Cucumber Mosaic Virus,whole_plant,stunted_growth,Stunted growth,ការលូតលាស់យឺត,0.50,False,False
+cucumber-mosaic-virus,Cucumber Mosaic Virus,whole_plant,reduced_vigor,Reduced vigor,រុក្ខជាតិខ្សោយ,0.50,False,False
+cucumber-mosaic-virus,Cucumber Mosaic Virus,environment,warm,Warm,ក្តៅ,0.50,False,False
+cucumber-mosaic-virus,Cucumber Mosaic Virus,environment,spread_by_aphids,Spread by aphids,រាលដាលដោយសត្វល្អិត aphids,0.50,False,False
+cucumber-mosaic-virus,Cucumber Mosaic Virus,environment,presence_of_infected_plants,Presence of infected plants,មានដំណាំឆ្លងនៅជិត,0.50,False,False
+sunflower-chlorotic-mottle-virus,Sunflower Chlorotic Mottle Virus,leaf,yellow_mottling_chlorotic_patches,Yellow mottling (chlorotic patches),មានពណ៌លឿងច្របល់ (chlorotic mottling),0.50,False,False
+sunflower-chlorotic-mottle-virus,Sunflower Chlorotic Mottle Virus,leaf,mosaic_pattern_on_leaves,Mosaic pattern on leaves,មានលំនាំ mosaic លើស្លឹក,0.50,False,False
+sunflower-chlorotic-mottle-virus,Sunflower Chlorotic Mottle Virus,leaf,leaves_may_curl_or_distort,Leaves may curl or distort,ស្លឹកអាចកោង ឬ ខូចទ្រង់ទ្រាយ,0.50,False,False
+sunflower-chlorotic-mottle-virus,Sunflower Chlorotic Mottle Virus,stem,stunted_growth,Stunted growth,ការលូតលាស់យឺត,0.50,False,False
+sunflower-chlorotic-mottle-virus,Sunflower Chlorotic Mottle Virus,stem,weak_stem,Weak stem,ដើមខ្សោយ,0.50,False,False
+sunflower-chlorotic-mottle-virus,Sunflower Chlorotic Mottle Virus,head,small_or_deformed_head,Small or deformed head,ក្បាលតូច ឬ ខូចទ្រង់ទ្រាយ,0.50,False,False
+sunflower-chlorotic-mottle-virus,Sunflower Chlorotic Mottle Virus,head,poor_seed_development,Poor seed development,ការបង្កើតគ្រាប់មិនល្អ,0.50,False,False
+sunflower-chlorotic-mottle-virus,Sunflower Chlorotic Mottle Virus,whole_plant,stunted_growth,Stunted growth,ការលូតលាស់យឺត,0.50,False,False
+sunflower-chlorotic-mottle-virus,Sunflower Chlorotic Mottle Virus,whole_plant,reduced_vigor,Reduced vigor,រុក្ខជាតិខ្សោយ,0.50,False,False
+sunflower-chlorotic-mottle-virus,Sunflower Chlorotic Mottle Virus,environment,warm,Warm,ក្តៅ,0.50,False,False
+sunflower-chlorotic-mottle-virus,Sunflower Chlorotic Mottle Virus,environment,spread_by_insect_vectors_aphids,Spread by insect vectors (aphids),រាលដាលដោយសត្វល្អិត (aphids),0.50,False,False
+sunflower-chlorotic-mottle-virus,Sunflower Chlorotic Mottle Virus,environment,presence_of_infected_plants,Presence of infected plants,មានដំណាំឆ្លងនៅជិត,0.50,False,False
+aster-yellows,Aster Yellows,leaf,yellowing_of_leaves_chlorosis,Yellowing of leaves (chlorosis),ស្លឹកលឿង (chlorosis),0.50,False,False
+aster-yellows,Aster Yellows,leaf,leaves_may_become_small_and_narrow,Leaves may become small and narrow,ស្លឹកតូច និងស្តើង,0.50,False,False
+aster-yellows,Aster Yellows,leaf,leaf_veins_may_remain_green,Leaf veins may remain green,សរសៃស្លឹកនៅតែបៃតង,0.50,False,False
+aster-yellows,Aster Yellows,stem,stunted_growth,Stunted growth,ការលូតលាស់យឺត,0.50,False,False
+aster-yellows,Aster Yellows,stem,abnormal_branching_bushy_appearance,Abnormal branching (bushy appearance),មានសាខាច្រើនខុសធម្មតា,0.50,False,False
+aster-yellows,Aster Yellows,root,no_visible_symptoms,No visible symptoms,No visible symptoms,0.50,False,False
+aster-yellows,Aster Yellows,head,green_deformed_flower_heads,"Green, deformed flower heads",ផ្កាប្រែជាពណ៌បៃតង និងខូចទ្រង់ទ្រាយ,0.50,False,False
+aster-yellows,Aster Yellows,head,flowers_may_turn_leafy_phyllody,Flowers may turn leafy (phyllody),ផ្កាអាចប្រែក្លាយជាស្លឹក (phyllody),0.50,False,False
+aster-yellows,Aster Yellows,head,poor_or_no_seed_formation,Poor or no seed formation,មិនបង្កើតគ្រាប់ ឬ បង្កើតតិច,0.50,False,False
+aster-yellows,Aster Yellows,whole_plant,stunted_growth,Stunted growth,ការលូតលាស់យឺត,0.50,False,False
+aster-yellows,Aster Yellows,whole_plant,yellowing_of_entire_plant,Yellowing of entire plant,ដំណាំលឿងទាំងស្រុង,0.50,False,False
+aster-yellows,Aster Yellows,whole_plant,reduced_yield,Reduced yield,ទិន្នផលថយចុះ,0.50,False,False
+aster-yellows,Aster Yellows,environment,warm,Warm,ក្តៅ,0.50,False,False
+aster-yellows,Aster Yellows,environment,spread_by_leafhoppers,Spread by leafhoppers,រាលដាលដោយសត្វល្អិត leafhoppers,0.50,False,False
+aster-yellows,Aster Yellows,environment,presence_of_infected_plants,Presence of infected plants,មានដំណាំឆ្លងនៅជិត,0.50,False,False

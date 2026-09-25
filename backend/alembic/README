@@ -1,0 +1,11 @@
+Alembic migrations for the Sunflower API.
+
+The database URL is read from the ALEMBIC_DATABASE_URL environment variable in
+env.py (the sync psycopg driver), never from alembic.ini.
+
+  alembic revision --autogenerate -m "add disease_symptoms"
+  alembic upgrade head
+  alembic downgrade -1
+
+Every schema change ships a migration. create_all() is banned. Always verify a new
+revision round-trips: upgrade head, downgrade base, upgrade head again.

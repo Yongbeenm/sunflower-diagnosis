@@ -1,16 +1,40 @@
-# macOS
-.DS_Store
-
-# Python cache
+# Python
 __pycache__/
 *.py[cod]
-
-# Virtual envs
 .venv/
 venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
 
-# Local runtime databases
-instance/*.db
+# Node
+node_modules/
+dist/
+.vite/
+coverage/
 
-# Flask uploads (optional local artifacts)
-app/static/uploads/
+# Env & secrets
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
+
+# Media & local data
+backend/media/
+*.sqlite
+*.db
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+__MACOSX/
+
+# Video demo recordings
+videos_10min/
+*.webm
+*.mp4
